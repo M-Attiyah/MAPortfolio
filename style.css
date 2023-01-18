@@ -1,0 +1,352 @@
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                              Declare Variables                             */
+/* -------------------------------------------------------------------------- */
+
+:root {
+    --white: #FFF;
+    --grey-1: #c7c7c7; 
+    --grey-2: #898989;
+    --dark-grey: #30363D;
+    --dark-1: #0F0F0F;
+    --dark-2: #1E1E1E;
+    --dark-3: #1E2633;
+    --dark-trans: rgba(30, 30, 30, 88%);
+    --light-blue: #63ACFF;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Global Rules                                */
+/* -------------------------------------------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    width: 100vw;
+    height: 100vh;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               PAGE CONTAINER                               */
+/* -------------------------------------------------------------------------- */
+
+.page {
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/Rectangle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+} 
+
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+
+.page__header {
+    margin: auto;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+.page__header .page__header__container {
+    gap: 200px;
+}
+
+.page__header .header__about .about__welcome {
+    font-style: italic;
+    margin-bottom: 30px;
+    opacity: .7;
+}
+
+.page__header .header__about .about__title {
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 21.4px;
+}
+
+.page__header .header__about .about__describe {
+    font-weight: 400;
+    color: var(--grey-2);
+    max-width: 800px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.page__header .header__contact .contact__icons {
+    margin-top: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MAIN CONTENT                                */
+/* -------------------------------------------------------------------------- */
+
+main {
+    margin: 30px auto;
+    scroll-snap-align: center;
+}
+
+.page__main__container {
+    width: 100%;
+    min-height: 100vh;
+    gap: 30px;
+    position: relative;
+}
+
+.page__main__container .main__projects {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    padding: 20px;
+}
+
+.page__main__container .main__projects .project {
+    background-color: #0F0F0F;
+    max-width: 45em;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.project .project__title {
+    margin-bottom: 8px;
+}
+
+.project .project__describe {
+    margin-bottom: 20px;
+}
+
+.project ul {
+    margin-bottom: 25px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  UTILITIES                                 */
+/* -------------------------------------------------------------------------- */
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.base {
+    min-height: 100vh;
+    width: 80em;
+    max-width: 100%;
+    padding: 0px 40px;
+}
+
+.flex {
+    display: flex;
+}
+
+.center-vertical {
+    align-items: center;
+}
+
+.center-horizontal {
+    justify-content: center;
+}
+
+.center-both {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-end-horizontal {
+    justify-content: flex-end;
+}
+
+.wrap {
+    flex-wrap: wrap;
+    gap: 8px 20px !important;
+}
+
+.gap {
+    gap: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   LAYOUT                                   */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 500px) {
+    .header__about {
+        text-align: center;
+    }
+    h1 {
+        font-size: 35px !important;
+    }
+    .lg-txt {
+        font-size: 20px !important;
+    }
+    .page__header .header__about .about__title {
+        letter-spacing: 4px;
+    }
+
+    .page__header .page__header__container {
+        gap: 130px;
+    }
+    .header__contact {
+        margin: auto;
+    }
+
+    .sm-h {
+        font-size: 22px !important;
+    }
+    .sm-text {
+        font-size: 13px !important;
+    }
+    ul li {
+        font-size: 12px !important;
+    }   
+
+    .page__main__container .main__projects {
+        padding: 20px 10px;
+    }
+
+    .base {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 860px) {
+    .page__main {
+        margin-top: 300px;
+    }
+    .page__main__container {
+        flex-direction: column;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 TYPOGRAPHY                                 */
+/* -------------------------------------------------------------------------- */
+
+h1 {
+    font-size: 55px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h3.sm-h {
+    font-size: 27px;
+}
+
+.lg-txt {
+   font-size: 25px;
+}
+.med-txt {
+    font-size: 20px;
+}
+.sm-txt {
+    font-size: 16px;
+}
+.title {
+    letter-spacing: 21.2px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    LISTS                                   */
+/* -------------------------------------------------------------------------- */
+
+ul {
+    list-style: none;
+}
+ul li {
+    font-size: 14px;
+    color: var(--light-blue);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    LINKS                                   */
+/* -------------------------------------------------------------------------- */
+
+.link {
+    text-decoration: none;
+    color: var(--white);
+}
+.link:hover {
+    opacity: .7;
+}
+.link:active {
+    opacity: .5;
+}
+.text-link {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+}
+.to-bottom {
+    flex-direction: column;
+}
+.to-top {
+    flex-direction: column-reverse;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    ICONS                                   */
+/* -------------------------------------------------------------------------- */
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--white);
+}
+.icon:hover {
+    opacity: .7;
+}
+.icon:active {
+    opacity: .5;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   BUTTONS                                  */
+/* -------------------------------------------------------------------------- */
+
+.btn {
+    background-color: var(--dark-3);
+    padding: 7px 10px;
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+    color: var(--light-blue);
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+.btn:hover {
+    opacity: .5;
+}
+.btn:active {
+    opacity: .3;
+}
